@@ -1,0 +1,33 @@
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}
+.testi-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--r);
+  padding: var(--space-6);
+}
+.testi-quote-icon {
+  color: var(--gold);
+  margin-bottom: var(--space-4);
+}
+.testi-text {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.74;
+  margin-bottom: var(--space-5);
+}
+.testi-author { display: flex; align-items: center; gap: var(--space-3); }
+.testi-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  overflow: hidden; background: rgba(255,255,255,0.1); flex-shrink: 0;
+}
+.testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.testi-name { font-size: 0.88rem; font-weight: 700; color: #fff; }
+.testi-role { font-size: 0.74rem; color: rgba(255,255,255,0.45); }
+
+@media (max-width: 900px) {
+  .testi-grid { grid-template-columns: 1fr; }
+}

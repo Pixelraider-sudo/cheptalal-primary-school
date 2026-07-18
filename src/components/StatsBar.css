@@ -1,0 +1,23 @@
+.stats-bar {
+  background: var(--green-dark);
+}
+.stats-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.stats-cell {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.stats-cell:last-child {
+  border-right: none;
+}
+
+@media (max-width: 768px) {
+  .stats-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stats-cell {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}

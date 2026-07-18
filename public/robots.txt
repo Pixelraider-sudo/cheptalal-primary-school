@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /icons/
+
+Sitemap: https://cheptalalprimary.sch.ke/sitemap.xml
+Sitemap: https://cheptalalprimary.sch.ke/sitemap-index.xml

@@ -1,0 +1,108 @@
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  height: var(--nav-h);
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.nav.scrolled { box-shadow: 0 1px 20px rgba(0,0,0,0.07); border-color: var(--line); }
+.nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); }
+.nav-brand { display: flex; align-items: center; gap: var(--space-3); }
+.nav-logo {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: var(--green); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: transform 0.3s ease;
+}
+.nav-logo svg { width: 24px; height: 24px; }
+.nav-brand:hover .nav-logo { transform: rotate(6deg) scale(1.06); }
+.nav-name strong { display: block; font-size: 0.93rem; font-weight: 700; color: var(--green); line-height: 1.2; }
+.nav-name span { font-size: 0.68rem; color: var(--text-light); }
+.nav-links { display: flex; align-items: center; gap: 2px; flex: 1; justify-content: center; }
+.nav-links a {
+  padding: 6px 13px; border-radius: var(--r-sm);
+  font-size: 0.85rem; font-weight: 500; color: var(--text-mid);
+  transition: all 0.18s; position: relative; display: inline-block;
+}
+.nav-links a::after {
+  content: ''; position: absolute; bottom: 3px; left: 13px; right: 13px;
+  height: 2px; background: var(--gold); border-radius: 2px;
+  transform: scaleX(0); transition: transform 0.22s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--green); }
+.nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+.nav-cta { display: flex; gap: var(--space-3); }
+.nav-cta .btn { padding: 9px 18px; font-size: 0.82rem; }
+.hamburger { display: none; flex-direction: column; gap: 5px; padding: 8px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: 0.25s; }
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+.mob-menu {
+  display: none; position: fixed; inset: 0; z-index: 400;
+  background: var(--white); flex-direction: column;
+  padding: calc(var(--nav-h) + var(--space-5)) var(--space-5) var(--space-8);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+.mob-menu.open { display: flex; transform: translateX(0); }
+.mob-links { display: flex; flex-direction: column; gap: var(--space-1); margin-bottom: var(--space-6); }
+.mob-links a {
+  padding: var(--space-4); border-radius: var(--r-sm);
+  font-size: 1rem; font-weight: 500; color: var(--text);
+  border-bottom: 1px solid var(--line);
+  transition: all 0.18s; display: flex; align-items: center; justify-content: space-between;
+}
+.mob-links a::after { content: '→'; opacity: 0.3; }
+.mob-links a:hover { color: var(--green); background: var(--green-light); }
+@media (max-width: 768px) {
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .mob-menu { display: flex; }
+}
+
+/* ===== MORE DROPDOWN ===== */
+.nav-more-btn {
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.18s;
+  cursor: pointer;
+}
+.nav-more-btn:hover,
+.nav-more-btn.open { color: var(--green); background: var(--green-light); }
+.nav-more-btn .rotated { transform: rotate(180deg); }
+.nav-more-btn svg { transition: transform 0.2s; }
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: var(--sh2);
+  min-width: 170px;
+  z-index: 200;
+  overflow: hidden;
+  animation: dropIn 0.18s ease both;
+}
+@keyframes dropIn {
+  from { opacity:0; transform: translateX(-50%) translateY(-6px); }
+  to   { opacity:1; transform: translateX(-50%) translateY(0); }
+}
+.nav-dropdown a {
+  display: block;
+  padding: 10px 18px;
+  font-size: 0.86rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: all 0.15s;
+}
+.nav-dropdown a:hover,
+.nav-dropdown a.active { color: var(--green); background: var(--green-light); }

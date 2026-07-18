@@ -1,0 +1,104 @@
+/* ===== HOME PAGE NEWS LAYOUT ===== */
+.news-home-grid {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: var(--space-5);
+}
+.news-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ===== CARD SHARED ===== */
+.news-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.news-card:hover {
+  box-shadow: var(--sh2);
+  border-color: rgba(27,94,32,0.18);
+}
+.news-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.news-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.news-card:hover .news-thumb img { transform: scale(1.04); }
+.news-thumb-lg  { height: 260px; }
+.news-thumb-sm  { height: 180px; }
+.news-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.28) 0%, transparent 55%);
+}
+.news-category {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: var(--gold);
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 0.67rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.01em;
+}
+.news-body { padding: var(--space-5); }
+.news-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  color: var(--text-light);
+  margin-bottom: var(--space-2);
+}
+.news-body h3 {
+  font-size: 0.97rem;
+  font-weight: 700;
+  line-height: 1.38;
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.01em;
+}
+.news-card-featured .news-body h3 { font-size: 1.18rem; }
+.news-body p {
+  font-size: 0.84rem;
+  color: var(--text-mid);
+  line-height: 1.64;
+}
+.news-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: var(--space-4);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--green-mid);
+  transition: gap 0.2s ease;
+}
+.news-link:hover { gap: 8px; }
+
+/* ===== NEWS PAGE GRID ===== */
+.news-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 900px) {
+  .news-home-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+  .news-side { flex-direction: column; }
+}
+@media (max-width: 640px) {
+  .news-list-grid { grid-template-columns: 1fr; }
+}

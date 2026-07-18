@@ -1,0 +1,11 @@
+# Design Movement: "Kenyan Meridian"
+
+Form and space in this movement are governed by the tension between the equatorial horizon and the vertical aspirations of young minds. Massive geometric blocks — forest green rectangles, ochre gold bands — divide the plane with the authority of surveyor's lines across highland terrain. Negative space breathes like the Bomet Valley at dawn: generous, unhurried, intentional. Every composition is the product of painstaking calibration, the work of someone who has spent countless hours at the intersection of grid and gesture.
+
+Color draws from the land itself: the deep, authoritative green of highland cedar forests, the warm gold of late-afternoon savanna light, the clean white of chalk dust and cloud. These three tones — and only these — speak all necessary language. The palette is not decorative; it is structural. Each hue carries institutional weight, used with the reverence of a master who understands that restraint is the highest form of sophistication.
+
+Typography enters sparingly, treated as architectural element rather than information vessel. A single serif word set at monumental scale anchors the vertical axis — not centered, but off-axis, creating productive tension. Supporting text appears as whispered annotation: small, precise, unhurried. The letterforms are chosen with the care of someone who has studied the relationship between type and silence for decades.
+
+Rhythm and repetition build meaning through patient accumulation. Thin parallel lines — echoing the horizontal lines in a school exercise book — layer across sections with the systematic precision of scientific notation. Circular forms emerge as quiet counterpoint to the grid: the sun, the eye, the cycle of learning. Every repeated element is refined until it reads as inevitable, not arbitrary, a mark of deep expertise expressed through meticulous craft.
+
+The composition rewards sustained looking. A first glance sees structure; a longer gaze reveals the subtle conceptual DNA — the aspiration encoded in every carefully placed element. This is not decoration. It is institutional identity expressed as serious art, the kind of work that proves an invisible subject can be mapped, studied, and dignified through careful, expert attention.

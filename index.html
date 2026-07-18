@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/>
+
+  <!-- Primary meta (overridden per-page by react-helmet-async) -->
+  <title>Cheptalal Primary School – Quality CBC Education in Bomet County, Kenya</title>
+  <meta name="description" content="Cheptalal Primary School offers CBC-aligned quality education in Konoin Sub-County, Bomet County, Kenya. Enrolling learners from PP1 to Grade 6 since 1989."/>
+  <meta name="theme-color" content="#1B5E20"/>
+  <meta name="color-scheme" content="light"/>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="Cheptalal PS"/>
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"/>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-96.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-72.png"/>
+
+  <!-- Fonts: preconnect first, then load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- Preconnect CDNs used by images -->
+  <link rel="preconnect" href="https://images.unsplash.com"/>
+  <link rel="dns-prefetch" href="https://images.unsplash.com"/>
+
+  <!-- JSON-LD: EducationalOrganization (static fallback — react-helmet adds dynamic per-page) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":["EducationalOrganization","School"],
+    "@id":"https://cheptalalprimary.sch.ke/#school",
+    "name":"Cheptalal Primary School",
+    "url":"https://cheptalalprimary.sch.ke",
+    "telephone":"+254700000000",
+    "email":"info@cheptalalprimary.sch.ke",
+    "foundingDate":"1989",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Konoin",
+      "addressRegion":"Bomet County",
+      "addressCountry":"KE"
+    },
+    "geo":{"@type":"GeoCoordinates","latitude":"-0.60962","longitude":"35.37282"}
+  }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
