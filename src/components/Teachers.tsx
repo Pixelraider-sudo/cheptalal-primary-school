@@ -1,10 +1,16 @@
-import { motion } from 'framer-motion';
-import type { Teacher } from '../types';
-import { Badge } from './ui';
-import { fadeUp, hoverLift, viewportOnce } from '../lib/motion';
-import './Teachers.css';
+import { motion } from "framer-motion";
+import type { Teacher } from "../types";
+import { Badge } from "./ui";
+import { fadeUp, hoverLift, viewportOnce } from "../lib/motion";
+import "./Teachers.css";
 
-export function TeacherCard({ teacher, delay = 0 }: { teacher: Teacher; delay?: number }) {
+export function TeacherCard({
+  teacher,
+  delay = 0,
+}: {
+  teacher: Teacher;
+  delay?: number;
+}) {
   return (
     <motion.div
       className="teacher-card"
@@ -16,7 +22,11 @@ export function TeacherCard({ teacher, delay = 0 }: { teacher: Teacher; delay?: 
       {...hoverLift}
     >
       <div className="teacher-photo">
-        <img src={teacher.photoUrl} alt={`${teacher.name}, ${teacher.title}`} loading="lazy" />
+        <img
+          src={teacher.photoUrl}
+          alt={`${teacher.name}, ${teacher.title}`}
+          loading="lazy"
+        />
         <div className="teacher-badge">
           <Badge tone="gold">{teacher.badge}</Badge>
         </div>

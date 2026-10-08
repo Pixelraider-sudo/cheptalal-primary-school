@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react';
+import type { ReactNode } from "react";
 
-type SectionTone = 'default' | 'alt' | 'dark';
+type SectionTone = "default" | "alt" | "dark";
 
 interface SectionProps {
   children: ReactNode;
@@ -13,13 +13,14 @@ interface SectionProps {
 
 export default function Section({
   children,
-  tone = 'default',
+  tone = "default",
   id,
-  className = '',
+  className = "",
   ariaLabel,
   ariaLabelledBy,
 }: SectionProps) {
-  const toneClass = tone === 'alt' ? 'section-alt' : tone === 'dark' ? 'section-dark' : '';
+  const toneClass =
+    tone === "alt" ? "section-alt" : tone === "dark" ? "section-dark" : "";
   return (
     <section
       id={id}

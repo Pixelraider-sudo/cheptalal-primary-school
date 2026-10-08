@@ -1,5 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { SITE, type PageMeta } from '../lib/seo';
+import { Helmet } from "react-helmet-async";
+import { SITE, type PageMeta } from "../lib/seo";
 
 interface SEOHeadProps extends Partial<PageMeta> {
   title: string;
@@ -7,10 +7,17 @@ interface SEOHeadProps extends Partial<PageMeta> {
   path: string;
 }
 
-export default function SEOHead({ title, description, path, keywords, ogImage, noIndex }: SEOHeadProps) {
+export default function SEOHead({
+  title,
+  description,
+  path,
+  keywords,
+  ogImage,
+  noIndex,
+}: SEOHeadProps) {
   const canonical = `${SITE.url}${path}`;
   const image = ogImage ?? SITE.defaultImage;
-  const allKeywords = [...(SITE.keywords), ...(keywords ?? [])].join(', ');
+  const allKeywords = [...SITE.keywords, ...(keywords ?? [])].join(", ");
 
   return (
     <Helmet>
@@ -20,9 +27,15 @@ export default function SEOHead({ title, description, path, keywords, ogImage, n
       <meta name="description" content={description} />
       <meta name="keywords" content={allKeywords} />
       <meta name="author" content={SITE.name} />
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
+      <meta
+        name="robots"
+        content={noIndex ? "noindex, nofollow" : "index, follow"}
+      />
       <meta name="theme-color" content={SITE.themeColor} />
-      <meta name="google-site-verification" content="REPLACE_WITH_GSC_VERIFICATION_CODE" />
+      <meta
+        name="google-site-verification"
+        content="REPLACE_WITH_GSC_VERIFICATION_CODE"
+      />
       <link rel="canonical" href={canonical} />
 
       {/* ─── Open Graph ─── */}
@@ -34,7 +47,10 @@ export default function SEOHead({ title, description, path, keywords, ogImage, n
       <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${SITE.name} – ${description.slice(0, 80)}`} />
+      <meta
+        property="og:image:alt"
+        content={`${SITE.name} – ${description.slice(0, 80)}`}
+      />
       <meta property="og:locale" content={SITE.locale} />
 
       {/* ─── Twitter / X ─── */}
@@ -48,8 +64,14 @@ export default function SEOHead({ title, description, path, keywords, ogImage, n
       {/* ─── Geographic / Local SEO ─── */}
       <meta name="geo.region" content="KE-02" />
       <meta name="geo.placename" content="Konoin, Bomet County, Kenya" />
-      <meta name="geo.position" content={`${SITE.coordinates.lat};${SITE.coordinates.lng}`} />
-      <meta name="ICBM" content={`${SITE.coordinates.lat}, ${SITE.coordinates.lng}`} />
+      <meta
+        name="geo.position"
+        content={`${SITE.coordinates.lat};${SITE.coordinates.lng}`}
+      />
+      <meta
+        name="ICBM"
+        content={`${SITE.coordinates.lat}, ${SITE.coordinates.lng}`}
+      />
 
       {/* ─── Mobile / PWA ─── */}
       <meta name="mobile-web-app-capable" content="yes" />

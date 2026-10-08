@@ -1,19 +1,19 @@
 :root {
   /* === Brand palette === */
-  --green: #1B5E20;
-  --green-mid: #2E7D32;
-  --green-light: #E8F5E9;
-  --green-dark: #0A2A0C;
-  --gold: #C8861A;
-  --gold-deep: #9A6610;
-  --gold-light: #FBF3E3;
+  --green: #1b5e20;
+  --green-mid: #2e7d32;
+  --green-light: #e8f5e9;
+  --green-dark: #0a2a0c;
+  --gold: #c8861a;
+  --gold-deep: #9a6610;
+  --gold-light: #fbf3e3;
   --white: #fff;
-  --grey: #F6F7F9;
-  --grey-100: #EEF1F4;
-  --line: #E2E5EA;
-  --text: #161A22;
-  --text-mid: #4B5563;
-  --text-light: #6B7280;
+  --grey: #f6f7f9;
+  --grey-100: #eef1f4;
+  --line: #e2e5ea;
+  --text: #161a22;
+  --text-mid: #4b5563;
+  --text-light: #6b7280;
 
   /* === Layout === */
   --nav-h: 76px;
@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.6;
@@ -99,7 +99,7 @@ svg {
   margin-bottom: var(--space-3);
 }
 .sl::before {
-  content: '';
+  content: "";
   width: 4px;
   height: 16px;
   background: var(--gold);
@@ -110,7 +110,7 @@ svg {
   color: var(--gold);
 }
 .st {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(1.75rem, 2.8vw, 2.5rem);
   font-weight: 700;
   line-height: 1.2;
@@ -217,7 +217,9 @@ svg {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--r);
-  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 .card:hover {
   box-shadow: var(--sh2);
@@ -230,7 +232,9 @@ svg {
   border: 1px solid var(--line);
   border-radius: var(--r);
   padding: var(--space-6) var(--space-5);
-  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 .feature-card:hover {
   box-shadow: var(--sh2);
@@ -265,7 +269,7 @@ svg {
   text-align: center;
 }
 .stat-card-num {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 2.3rem;
   font-weight: 700;
   color: var(--gold);
@@ -357,7 +361,12 @@ svg {
 .page-banner {
   position: relative;
   padding: calc(var(--nav-h) + var(--space-8)) 0 var(--space-8);
-  background: linear-gradient(120deg, var(--green-dark) 0%, var(--green) 60%, var(--green-mid) 100%);
+  background: linear-gradient(
+    120deg,
+    var(--green-dark) 0%,
+    var(--green) 60%,
+    var(--green-mid) 100%
+  );
   color: #fff;
   overflow: hidden;
 }
@@ -374,7 +383,7 @@ svg {
   color: var(--gold);
 }
 .page-banner h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 800;
   letter-spacing: -0.01em;
@@ -448,7 +457,9 @@ textarea:focus-visible,
 
 /* ===== PERFORMANCE: reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -458,11 +469,30 @@ textarea:focus-visible,
 
 /* ===== PRINT STYLES ===== */
 @media print {
-  .nav, .wa-float, .btt, .toast, .skip-link, .hero-scroll { display: none !important; }
-  .page-banner { background: none !important; color: #000 !important; border-bottom: 2px solid #000; }
-  .section { padding: 16px 0 !important; }
-  a { color: #000 !important; text-decoration: underline; }
-  body { font-size: 12pt; line-height: 1.5; }
+  .nav,
+  .wa-float,
+  .btt,
+  .toast,
+  .skip-link,
+  .hero-scroll {
+    display: none !important;
+  }
+  .page-banner {
+    background: none !important;
+    color: #000 !important;
+    border-bottom: 2px solid #000;
+  }
+  .section {
+    padding: 16px 0 !important;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
 }
 
 /* ===== FOCUS VISIBLE ===== */
@@ -479,10 +509,19 @@ textarea:focus-visible,
 }
 
 /* ===== SCROLLBAR ===== */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--grey); }
-::-webkit-scrollbar-thumb { background: var(--green-light); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--green-mid); }
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--grey);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-mid);
+}
 
 /* ===== RESPONSIVE IMAGES ===== */
 img {
@@ -493,16 +532,29 @@ img {
 
 /* ===== ULTRA WIDE ===== */
 @media (min-width: 1600px) {
-  .container { max-width: 1380px; }
+  .container {
+    max-width: 1380px;
+  }
 }
 @media (min-width: 2000px) {
-  .container { max-width: 1600px; }
-  .st { font-size: 3rem; }
+  .container {
+    max-width: 1600px;
+  }
+  .st {
+    font-size: 3rem;
+  }
 }
 
 /* ===== MOBILE MICRO ===== */
 @media (max-width: 360px) {
-  .container { padding: 0 12px; }
-  .btn { padding: 11px 18px; font-size: 0.84rem; }
-  .hero h1 { font-size: 2rem; }
+  .container {
+    padding: 0 12px;
+  }
+  .btn {
+    padding: 11px 18px;
+    font-size: 0.84rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
 }

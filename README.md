@@ -3,6 +3,7 @@
 **React 19 · TypeScript · Vite 8 · React Router v7 · Framer Motion · Lucide React · React Helmet Async**
 
 ## Quick Start
+
 ```bash
 cp .env.example .env.local   # fill in your keys
 npm install
@@ -12,21 +13,23 @@ npm run preview              # preview production build
 ```
 
 ## Pages (11 routes)
-| Route | Page |
-|---|---|
-| `/` | Home — all sections |
-| `/about` | School history, mission, profile |
-| `/curriculum` | CBC philosophy + interactive journey |
-| `/teachers` | Staff directory |
-| `/news` | News + upcoming events |
-| `/gallery` | Filterable gallery + lightbox |
-| `/achievements` | Awards timeline |
-| `/calendar` | Interactive academic calendar |
-| `/admissions` | Process + FAQ + downloads |
-| `/contact` | Form + map + info |
-| `*` | Branded 404 |
+
+| Route           | Page                                 |
+| --------------- | ------------------------------------ |
+| `/`             | Home — all sections                  |
+| `/about`        | School history, mission, profile     |
+| `/curriculum`   | CBC philosophy + interactive journey |
+| `/teachers`     | Staff directory                      |
+| `/news`         | News + upcoming events               |
+| `/gallery`      | Filterable gallery + lightbox        |
+| `/achievements` | Awards timeline                      |
+| `/calendar`     | Interactive academic calendar        |
+| `/admissions`   | Process + FAQ + downloads            |
+| `/contact`      | Form + map + info                    |
+| `*`             | Branded 404                          |
 
 ## What Was Added in v4
+
 - **react-helmet-async** — unique title, description, canonical, OG, Twitter Card, geo meta per page
 - **JSON-LD structured data** — EducationalOrganization, WebSite+SearchAction, BreadcrumbList, FAQPage per page
 - **Breadcrumb nav** — semantic `<ol>` on every inner page
@@ -45,6 +48,7 @@ npm run preview              # preview production build
 - **Text selection** — branded green-light
 
 ## Before Going Live
+
 1. Replace `REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_CODE` in `SEOHead.tsx` with real GSC token
 2. Update `SITE.url` in `src/lib/seo.ts` with real domain
 3. Update all `sitemap.xml` + `robots.txt` URLs with real domain
@@ -55,7 +59,9 @@ npm run preview              # preview production build
 8. Upload real OG image to `/public/og-image.jpg` (1200×630px)
 
 ## Deploy
+
 ```bash
 git add . && git commit -m "feat: v4 SEO + PWA + performance + security" && git push
 ```
+
 Vercel auto-deploys. `vercel.json` handles SPA routing + security headers + asset caching.

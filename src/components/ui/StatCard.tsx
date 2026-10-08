@@ -1,4 +1,4 @@
-import { useCounterAnimation } from '../../hooks/useCounterAnimation';
+import { useCounterAnimation } from "../../hooks/useCounterAnimation";
 
 interface StatCardProps {
   value: number;
@@ -6,7 +6,7 @@ interface StatCardProps {
   label: string;
 }
 
-export default function StatCard({ value, suffix = '', label }: StatCardProps) {
+export default function StatCard({ value, suffix = "", label }: StatCardProps) {
   const { ref, value: display } = useCounterAnimation(value);
   return (
     <div className="stat-card">

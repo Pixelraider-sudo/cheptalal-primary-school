@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import type { LucideIcon } from 'lucide-react';
-import { fadeUp, hoverLift, viewportOnce } from '../../lib/motion';
+import { motion } from "framer-motion";
+import type { LucideIcon } from "lucide-react";
+import { fadeUp, hoverLift, viewportOnce } from "../../lib/motion";
 
 interface FeatureCardProps {
   icon: LucideIcon;
@@ -9,7 +9,12 @@ interface FeatureCardProps {
   delay?: number;
 }
 
-export default function FeatureCard({ icon: Icon, title, description, delay = 0 }: FeatureCardProps) {
+export default function FeatureCard({
+  icon: Icon,
+  title,
+  description,
+  delay = 0,
+}: FeatureCardProps) {
   return (
     <motion.div
       className="feature-card"

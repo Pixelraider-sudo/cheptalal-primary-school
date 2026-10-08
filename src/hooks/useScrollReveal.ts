@@ -1,10 +1,12 @@
-import { useEffect, useRef, type RefObject } from 'react';
+import { useEffect, useRef, type RefObject } from "react";
 
 /**
  * Attaches an IntersectionObserver to the returned ref.
  * Adds the `visible` class once the element scrolls into view.
  */
-export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(): RefObject<T | null> {
+export function useScrollReveal<
+  T extends HTMLElement = HTMLDivElement,
+>(): RefObject<T | null> {
   const ref = useRef<T | null>(null);
 
   useEffect(() => {
@@ -15,11 +17,11 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(): RefOb
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
 
     observer.observe(el);
@@ -41,10 +43,10 @@ export function useScrollRevealAll(selector: string, deps: unknown[] = []) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) entry.target.classList.add('visible');
+          if (entry.isIntersecting) entry.target.classList.add("visible");
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.12 },
     );
 
     els.forEach((el) => observer.observe(el));

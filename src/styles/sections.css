@@ -63,7 +63,7 @@
 }
 .about-badge strong {
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.9rem;
   color: var(--green);
   line-height: 1;
@@ -121,7 +121,7 @@
   align-items: center;
 }
 .cta-banner h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(1.6rem, 2.4vw, 2.2rem);
   font-weight: 700;
   color: #fff;
@@ -231,14 +231,14 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  border: 1.5px dashed #A5D6A7;
+  border: 1.5px dashed #a5d6a7;
   color: var(--green-mid);
   font-size: 0.85rem;
   cursor: pointer;
   transition: background 0.25s ease;
 }
 .contact-map:hover {
-  background: #DCEEDC;
+  background: #dceedc;
 }
 
 /* ===== CBC LEARNING JOURNEY ===== */
@@ -378,7 +378,7 @@
   margin-bottom: var(--space-5);
 }
 .headteacher-signature {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: 1.3rem;
   color: var(--green);
@@ -420,7 +420,12 @@
 .life-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 20, 10, 0.78) 0%, rgba(10, 20, 10, 0.1) 55%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(10, 20, 10, 0.78) 0%,
+    rgba(10, 20, 10, 0.1) 55%,
+    transparent 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -475,7 +480,7 @@
   justify-content: center;
 }
 .event-date-day {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 1;
@@ -524,7 +529,9 @@
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--r);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 .download-card:hover {
   border-color: rgba(27, 94, 32, 0.2);

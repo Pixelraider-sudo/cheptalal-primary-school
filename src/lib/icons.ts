@@ -10,8 +10,8 @@ import {
   TreePine,
   Bus,
   type LucideIcon,
-} from 'lucide-react';
-import type { NewsCategoryIcon, SchoolLifeIcon } from '../types';
+} from "lucide-react";
+import type { NewsCategoryIcon, SchoolLifeIcon } from "../types";
 
 export const newsCategoryIcons: Record<NewsCategoryIcon, LucideIcon> = {
   achievement: Trophy,

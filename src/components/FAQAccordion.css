@@ -1,5 +1,10 @@
-.faq-list { max-width: 760px; margin: 0 auto; }
-.faq-item { border-bottom: 1px solid var(--line); }
+.faq-list {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
 .faq-q {
   width: 100%;
   display: flex;
@@ -13,7 +18,9 @@
   text-align: left;
   transition: color 0.2s;
 }
-.faq-q:hover { color: var(--green-mid); }
+.faq-q:hover {
+  color: var(--green-mid);
+}
 .faq-icon {
   width: 30px;
   height: 30px;
@@ -24,7 +31,9 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background 0.25s, color 0.25s;
+  transition:
+    background 0.25s,
+    color 0.25s;
 }
 .faq-item.open .faq-icon {
   background: var(--green);

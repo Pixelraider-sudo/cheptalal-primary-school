@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { FileText, ArrowDownToLine } from 'lucide-react';
-import { downloads } from '../data/schoolLife';
-import { staggerContainer, staggerItem, viewportOnce } from '../lib/motion';
+import { motion } from "framer-motion";
+import { FileText, ArrowDownToLine } from "lucide-react";
+import { downloads } from "../data/schoolLife";
+import { staggerContainer, staggerItem, viewportOnce } from "../lib/motion";
 
 export default function Downloads() {
   return (
@@ -28,7 +28,12 @@ export default function Downloads() {
             <h4>{item.label}</h4>
             <span>{item.fileType}</span>
           </div>
-          <ArrowDownToLine size={18} strokeWidth={1.75} className="download-arrow" aria-hidden="true" />
+          <ArrowDownToLine
+            size={18}
+            strokeWidth={1.75}
+            className="download-arrow"
+            aria-hidden="true"
+          />
         </motion.a>
       ))}
     </motion.div>

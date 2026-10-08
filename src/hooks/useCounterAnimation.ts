@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 /**
  * Animates a number counting up from 0 to `target` once the element
@@ -31,7 +31,7 @@ export function useCounterAnimation(target: number, duration = 1800) {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     observer.observe(el);

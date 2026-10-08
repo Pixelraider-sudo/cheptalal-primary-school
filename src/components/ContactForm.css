@@ -5,13 +5,38 @@
   padding: var(--space-7);
   box-shadow: var(--sh);
 }
-.cf-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; letter-spacing: -0.01em; }
-.cf-sub { font-size: 0.83rem; color: var(--text-mid); margin-bottom: var(--space-5); }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
-.fg { margin-bottom: var(--space-4); }
-.fg label { display: block; font-size: 0.81rem; font-weight: 600; color: var(--text); margin-bottom: 5px; }
-.req { color: #dc2626; }
-.fg input, .fg select, .fg textarea {
+.cf-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.cf-sub {
+  font-size: 0.83rem;
+  color: var(--text-mid);
+  margin-bottom: var(--space-5);
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+.fg {
+  margin-bottom: var(--space-4);
+}
+.fg label {
+  display: block;
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.req {
+  color: #dc2626;
+}
+.fg input,
+.fg select,
+.fg textarea {
   width: 100%;
   padding: 11px 14px;
   border-radius: var(--r-sm);
@@ -20,15 +45,23 @@
   font-family: inherit;
   color: var(--text);
   background: var(--white);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   outline: none;
   resize: vertical;
 }
-.fg input:focus, .fg select:focus, .fg textarea:focus {
+.fg input:focus,
+.fg select:focus,
+.fg textarea:focus {
   border-color: var(--green);
-  box-shadow: 0 0 0 3px rgba(27,94,32,0.09);
+  box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.09);
 }
-.cf-submit { width: 100%; justify-content: center; padding: 13px; }
+.cf-submit {
+  width: 100%;
+  justify-content: center;
+  padding: 13px;
+}
 .cf-note {
   display: flex;
   align-items: center;
@@ -46,13 +79,29 @@
   text-align: center;
   box-shadow: var(--sh);
 }
-.cf-success-icon { color: var(--green); margin: 0 auto var(--space-4); }
-.cf-success h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: var(--space-3); }
-.cf-success p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; margin-bottom: var(--space-5); }
+.cf-success-icon {
+  color: var(--green);
+  margin: 0 auto var(--space-4);
+}
+.cf-success h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+.cf-success p {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.65;
+  margin-bottom: var(--space-5);
+}
 
 @media (max-width: 640px) {
-  .form-row { grid-template-columns: 1fr; }
-  .cf { padding: var(--space-5); }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .cf {
+    padding: var(--space-5);
+  }
 }
 
 .field-error {
@@ -66,5 +115,5 @@
 .fg select[aria-invalid="true"],
 .fg textarea[aria-invalid="true"] {
   border-color: #dc2626;
-  box-shadow: 0 0 0 3px rgba(220,38,38,0.09);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.09);
 }

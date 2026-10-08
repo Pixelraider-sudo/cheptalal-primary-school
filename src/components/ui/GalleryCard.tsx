@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import { Search } from 'lucide-react';
-import { fadeUp, viewportOnce } from '../../lib/motion';
+import { motion } from "framer-motion";
+import { Search } from "lucide-react";
+import { fadeUp, viewportOnce } from "../../lib/motion";
 
 interface GalleryCardProps {
   src: string;
@@ -10,7 +10,13 @@ interface GalleryCardProps {
   spanClass?: string;
 }
 
-export default function GalleryCard({ src, caption, onClick, delay = 0, spanClass = '' }: GalleryCardProps) {
+export default function GalleryCard({
+  src,
+  caption,
+  onClick,
+  delay = 0,
+  spanClass = "",
+}: GalleryCardProps) {
   return (
     <motion.div
       className={`gallery-card ${spanClass}`}
@@ -23,7 +29,7 @@ export default function GalleryCard({ src, caption, onClick, delay = 0, spanClas
       tabIndex={0}
       onClick={onClick}
       onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
+        if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           onClick();
         }

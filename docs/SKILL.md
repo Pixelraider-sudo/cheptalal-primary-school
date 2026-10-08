@@ -8,6 +8,7 @@ description: Build, update, extend, and deploy the Cheptalal Primary School webs
 A premium, production-ready multi-page school website for **Cheptalal Primary School**, Konoin Sub-County, Bomet County, Kenya.
 
 ## Stack
+
 - **React 19 + TypeScript** (strict mode)
 - **Vite 8** — dev server and production bundler
 - **React Router v7** — client-side routing (11 routes)
@@ -16,6 +17,7 @@ A premium, production-ready multi-page school website for **Cheptalal Primary Sc
 - **Plain CSS** with design tokens (no Tailwind, no CSS-in-JS)
 
 ## Quick Commands
+
 ```bash
 npm install          # first time / after pulling
 npm run dev          # http://localhost:5173
@@ -25,6 +27,7 @@ npm run preview      # preview production build locally
 ```
 
 ## Project Structure
+
 ```
 src/
   types/index.ts          ← ALL TypeScript interfaces live here (single source of truth)
@@ -90,6 +93,7 @@ vercel.json               ← SPA rewrite: all routes → /index.html (REQUIRED 
 ```
 
 ## Design System Tokens (src/styles/global.css)
+
 ```
 --green: #1B5E20          primary brand green
 --green-mid: #2E7D32      hover / accent green
@@ -104,7 +108,9 @@ vercel.json               ← SPA rewrite: all routes → /index.html (REQUIRED 
 ```
 
 ## Motion System (src/lib/motion.ts)
+
 All animations use `EASE = [0.22, 1, 0.36, 1]` for a settled, premium feel.
+
 - `fadeUp` — standard section/card reveal
 - `slideLeft / slideRight` — directional reveals
 - `scaleIn` — gallery cards
@@ -116,6 +122,7 @@ Always use `whileInView` + `viewport={viewportOnce}` for scroll-triggered animat
 Never use raw CSS `@keyframes` for interactive animations — use Framer Motion.
 
 ## Icon Rules
+
 - **Zero emoji** anywhere in the codebase
 - All icons from `lucide-react`
 - Data files store string keys (`'achievement'`, `'sports'`, etc.)
@@ -125,36 +132,44 @@ Never use raw CSS `@keyframes` for interactive animations — use Framer Motion.
 ## Adding New Content
 
 ### Add a teacher
+
 Edit `src/data/teachers.ts` — add a `Teacher` object with all required fields:
 `id, name, title, subject, department, photoUrl, badge`
 
 ### Add a news item
+
 Edit `src/data/news.ts` — `categoryIcon` must be one of:
 `'achievement' | 'community' | 'admissions' | 'sports' | 'facilities'`
 
 ### Add a gallery image
+
 Edit `src/data/content.ts` → `galleryImages` array.
 `category` must be one of: `'Campus' | 'Academics' | 'Events' | 'Sports' | 'Learning'`
 
 ### Add an achievement
+
 Edit `src/data/achievements.ts` — `icon` must be one of: `'trophy' | 'medal' | 'star' | 'award'`
 
 ### Add a new page
+
 1. Create `src/pages/YourPage.tsx`
 2. Add route in `src/App.tsx`
 3. Add link to `navLinks` in `src/data/content.ts`
 4. Add link to Footer if appropriate
 
 ## Adding a New Type
+
 All interfaces go in `src/types/index.ts`. Never define types inline in components.
 
 ## Deployment (Vercel)
+
 1. Push to GitHub (`Pixelraider-sudo/cheptalal-primary`)
 2. Import in Vercel — auto-detects Vite
 3. `vercel.json` handles SPA routing (already configured)
 4. Set custom domain (`.sch.ke` requires Ministry approval letter)
 
 **Before going live — replace these placeholders:**
+
 - `schoolInfo.phone` → real number in `src/data/content.ts`
 - `schoolInfo.email` → real email
 - `schoolInfo.whatsapp` → real WhatsApp number
@@ -164,6 +179,7 @@ All interfaces go in `src/types/index.ts`. Never define types inline in componen
 - `schoolInfo.mapQuery` → exact GPS coordinates once confirmed
 
 ## Accessibility Checklist
+
 - Skip link: `<a href="#main-content" className="skip-link">` in App.tsx
 - All images have `alt` text
 - All interactive elements have `aria-label` or visible label
@@ -173,6 +189,7 @@ All interfaces go in `src/types/index.ts`. Never define types inline in componen
 - Color contrast: green on white ≥ 4.5:1 ✓
 
 ## SEO
+
 - JSON-LD EducationalOrganization schema in `index.html`
 - OG + Twitter Card meta tags in `index.html`
 - `robots.txt` and `sitemap.xml` in `/public`

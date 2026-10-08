@@ -6,18 +6,20 @@
   z-index: 300;
   width: 52px;
   height: 52px;
-  background: #25D366;
+  background: #25d366;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 18px rgba(37,211,102,0.4);
-  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.4);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
   color: #fff;
 }
 .wa-float:hover {
   transform: scale(1.08);
-  box-shadow: 0 6px 24px rgba(37,211,102,0.55);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55);
 }
 .wa-tooltip {
   position: absolute;
@@ -33,7 +35,9 @@
   pointer-events: none;
   transition: opacity 0.2s;
 }
-.wa-float:hover .wa-tooltip { opacity: 1; }
+.wa-float:hover .wa-tooltip {
+  opacity: 1;
+}
 
 /* ===== Back to Top ===== */
 .btt {
@@ -52,11 +56,20 @@
   color: #fff;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
   transform: translateY(8px);
 }
-.btt.show { opacity: 1; pointer-events: all; transform: none; }
-.btt:hover { background: var(--green-mid); transform: translateY(-2px); }
+.btt.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: none;
+}
+.btt:hover {
+  background: var(--green-mid);
+  transform: translateY(-2px);
+}
 
 /* ===== Toast ===== */
 .toast {
@@ -77,12 +90,29 @@
   pointer-events: none;
   max-width: 320px;
 }
-.toast.show { transform: translateY(0); opacity: 1; }
-.toast.success { background: #166534; }
-.toast.error { background: #991b1b; }
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.toast.success {
+  background: #166534;
+}
+.toast.error {
+  background: #991b1b;
+}
 
 @media (max-width: 640px) {
-  .wa-float { bottom: var(--space-4); right: var(--space-4); }
-  .btt { bottom: 80px; right: var(--space-4); }
-  .toast { right: var(--space-4); left: var(--space-4); bottom: 80px; }
+  .wa-float {
+    bottom: var(--space-4);
+    right: var(--space-4);
+  }
+  .btt {
+    bottom: 80px;
+    right: var(--space-4);
+  }
+  .toast {
+    right: var(--space-4);
+    left: var(--space-4);
+    bottom: 80px;
+  }
 }

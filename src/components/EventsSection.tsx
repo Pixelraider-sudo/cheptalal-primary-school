@@ -1,14 +1,19 @@
-import { motion } from 'framer-motion';
-import { MapPin, CalendarDays } from 'lucide-react';
-import { events } from '../data/events';
-import { staggerContainer, staggerItem, viewportOnce } from '../lib/motion';
+import { motion } from "framer-motion";
+import { MapPin, CalendarDays } from "lucide-react";
+import { events } from "../data/events";
+import { staggerContainer, staggerItem, viewportOnce } from "../lib/motion";
 
 function formatEventDate(iso: string) {
   const d = new Date(iso);
   return {
-    day: d.toLocaleDateString('en-KE', { day: 'numeric' }),
-    month: d.toLocaleDateString('en-KE', { month: 'short' }).toUpperCase(),
-    full: d.toLocaleDateString('en-KE', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }),
+    day: d.toLocaleDateString("en-KE", { day: "numeric" }),
+    month: d.toLocaleDateString("en-KE", { month: "short" }).toUpperCase(),
+    full: d.toLocaleDateString("en-KE", {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }),
   };
 }
 
@@ -24,7 +29,11 @@ export default function EventsSection() {
       {events.map((event) => {
         const { day, month, full } = formatEventDate(event.date);
         return (
-          <motion.div className="event-card" key={event.id} variants={staggerItem}>
+          <motion.div
+            className="event-card"
+            key={event.id}
+            variants={staggerItem}
+          >
             <div className="event-date-block" aria-label={full}>
               <span className="event-date-day">{day}</span>
               <span className="event-date-month">{month}</span>

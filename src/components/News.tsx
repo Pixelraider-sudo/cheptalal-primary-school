@@ -1,19 +1,31 @@
-import { motion } from 'framer-motion';
-import { CalendarDays, ArrowRight } from 'lucide-react';
-import type { NewsItem } from '../types';
-import { newsCategoryIcons } from '../lib/icons';
-import { fadeUp, hoverLift, viewportOnce } from '../lib/motion';
-import './News.css';
+import { motion } from "framer-motion";
+import { CalendarDays, ArrowRight } from "lucide-react";
+import type { NewsItem } from "../types";
+import { newsCategoryIcons } from "../lib/icons";
+import { fadeUp, hoverLift, viewportOnce } from "../lib/motion";
+import "./News.css";
 
 function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('en-KE', { year: 'numeric', month: 'long', day: 'numeric' });
+  return new Date(iso).toLocaleDateString("en-KE", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
 
-export function NewsCard({ item, featured = false, delay = 0 }: { item: NewsItem; featured?: boolean; delay?: number }) {
+export function NewsCard({
+  item,
+  featured = false,
+  delay = 0,
+}: {
+  item: NewsItem;
+  featured?: boolean;
+  delay?: number;
+}) {
   const CategoryIcon = newsCategoryIcons[item.categoryIcon];
   return (
     <motion.article
-      className={`news-card ${featured ? 'news-card-featured' : ''}`}
+      className={`news-card ${featured ? "news-card-featured" : ""}`}
       initial="hidden"
       whileInView="visible"
       viewport={viewportOnce}
@@ -21,11 +33,15 @@ export function NewsCard({ item, featured = false, delay = 0 }: { item: NewsItem
       transition={{ delay }}
       {...hoverLift}
     >
-      <div className={`news-thumb ${featured ? 'news-thumb-lg' : 'news-thumb-sm'}`}>
+      <div
+        className={`news-thumb ${featured ? "news-thumb-lg" : "news-thumb-sm"}`}
+      >
         <img src={item.imageUrl} alt={item.title} loading="lazy" />
         <div className="news-overlay" aria-hidden="true" />
         <div className="news-category">
-          {CategoryIcon && <CategoryIcon size={12} strokeWidth={2.5} aria-hidden="true" />}
+          {CategoryIcon && (
+            <CategoryIcon size={12} strokeWidth={2.5} aria-hidden="true" />
+          )}
           {item.category}
         </div>
       </div>
@@ -37,7 +53,7 @@ export function NewsCard({ item, featured = false, delay = 0 }: { item: NewsItem
         <h3>{item.title}</h3>
         <p>{item.summary}</p>
         <a href={`/news#${item.id}`} className="news-link">
-          {featured ? 'Read Full Story' : 'Read More'}
+          {featured ? "Read Full Story" : "Read More"}
           <ArrowRight size={14} strokeWidth={2.25} />
         </a>
       </div>

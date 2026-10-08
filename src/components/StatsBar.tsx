@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { statItems } from '../data/content';
-import { StatCard, Container } from './ui';
-import { staggerContainer, staggerItem, viewportOnce } from '../lib/motion';
-import './StatsBar.css';
+import { motion } from "framer-motion";
+import { statItems } from "../data/content";
+import { StatCard, Container } from "./ui";
+import { staggerContainer, staggerItem, viewportOnce } from "../lib/motion";
+import "./StatsBar.css";
 
 export default function StatsBar() {
   return (
@@ -16,7 +16,11 @@ export default function StatsBar() {
           variants={staggerContainer}
         >
           {statItems.map((s) => (
-            <motion.div key={s.id} variants={staggerItem} className="stats-cell">
+            <motion.div
+              key={s.id}
+              variants={staggerItem}
+              className="stats-cell"
+            >
               <StatCard value={s.value} suffix={s.suffix} label={s.label} />
             </motion.div>
           ))}

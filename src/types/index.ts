@@ -1,21 +1,22 @@
 export interface Teacher {
   id: string;
   name: string;
-  title: string;       // e.g. "Headteacher", "Grade 4 Class Teacher"
-  subject: string;      // e.g. "Mathematics & English"
-  department: string;   // e.g. "Lower Primary", "Upper Primary", "Administration"
+  title: string; // e.g. "Headteacher", "Grade 4 Class Teacher"
+  subject: string; // e.g. "Mathematics & English"
+  department: string; // e.g. "Lower Primary", "Upper Primary", "Administration"
   photoUrl: string;
-  badge: string;        // e.g. "Grade 4", "Headteacher"
+  badge: string; // e.g. "Grade 4", "Headteacher"
   bio?: string;
 }
 
-export type NewsCategoryIcon = 'achievement' | 'community' | 'admissions' | 'sports' | 'facilities';
+export type NewsCategoryIcon =
+  "achievement" | "community" | "admissions" | "sports" | "facilities";
 
 export interface NewsItem {
   id: string;
   title: string;
-  date: string;          // ISO date string
-  category: string;      // e.g. "Achievement", "Community", "Admissions"
+  date: string; // ISO date string
+  category: string; // e.g. "Achievement", "Community", "Admissions"
   categoryIcon: NewsCategoryIcon;
   summary: string;
   content?: string;
@@ -23,7 +24,8 @@ export interface NewsItem {
   featured?: boolean;
 }
 
-export type GalleryCategory = 'Campus' | 'Academics' | 'Events' | 'Sports' | 'Learning';
+export type GalleryCategory =
+  "Campus" | "Academics" | "Events" | "Sports" | "Learning";
 
 export interface GalleryImage {
   id: string;
@@ -49,8 +51,8 @@ export interface Testimonial {
 
 export interface JourneyLevel {
   id: string;
-  shortLabel: string;   // e.g. "PP1"
-  fullLabel: string;    // e.g. "Pre-Primary 1"
+  shortLabel: string; // e.g. "PP1"
+  fullLabel: string; // e.g. "Pre-Primary 1"
   ageRange: string;
   learningFocus: string;
   subjects: { id: string; name: string }[];
@@ -67,7 +69,7 @@ export interface HeadteacherMessage {
 export interface EventItem {
   id: string;
   title: string;
-  date: string;          // ISO date string
+  date: string; // ISO date string
   location: string;
   description: string;
 }
@@ -75,10 +77,11 @@ export interface EventItem {
 export interface DownloadItem {
   id: string;
   label: string;
-  fileType: string;      // e.g. "PDF · Coming soon"
+  fileType: string; // e.g. "PDF · Coming soon"
 }
 
-export type SchoolLifeIcon = 'sports' | 'music' | 'drama' | 'clubs' | 'environment' | 'trips';
+export type SchoolLifeIcon =
+  "sports" | "music" | "drama" | "clubs" | "environment" | "trips";
 
 export interface SchoolLifeItem {
   id: string;

@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { schoolLifeItems } from '../data/schoolLife';
-import { schoolLifeIcons } from '../lib/icons';
-import { fadeUp, viewportOnce } from '../lib/motion';
+import { motion } from "framer-motion";
+import { schoolLifeItems } from "../data/schoolLife";
+import { schoolLifeIcons } from "../lib/icons";
+import { fadeUp, viewportOnce } from "../lib/motion";
 
 export default function SchoolLife() {
   return (

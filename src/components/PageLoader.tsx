@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-import { schoolInfo } from '../data/content';
-import './PageLoader.css';
+import { useEffect, useState } from "react";
+import { schoolInfo } from "../data/content";
+import "./PageLoader.css";
 
 export default function PageLoader() {
   const [progress, setProgress] = useState(0);
@@ -21,10 +21,18 @@ export default function PageLoader() {
   }, []);
 
   return (
-    <div className={`page-loader ${done ? 'done' : ''}`} role="status" aria-label="Loading">
+    <div
+      className={`page-loader ${done ? "done" : ""}`}
+      role="status"
+      aria-label="Loading"
+    >
       <div className="page-loader-logo" aria-hidden="true">
         <svg viewBox="0 0 36 36" fill="none" width="36" height="36">
-          <path d="M18 3L3 12v21h10v-8h10v8h10V12L18 3z" fill="white" opacity=".9" />
+          <path
+            d="M18 3L3 12v21h10v-8h10v8h10V12L18 3z"
+            fill="white"
+            opacity=".9"
+          />
           <circle cx="18" cy="12" r="4" fill="#C8861A" />
         </svg>
       </div>

@@ -1,4 +1,4 @@
-import type { Variants } from 'framer-motion';
+import type { Variants } from "framer-motion";
 
 /** Standard ease used across the site for a premium, settled feel. */
 export const EASE = [0.22, 1, 0.36, 1] as const;
@@ -42,7 +42,7 @@ export const staggerItem: Variants = {
 };
 
 /** Standard viewport config: animate once, slightly before fully in view. */
-export const viewportOnce = { once: true, margin: '-80px' };
+export const viewportOnce = { once: true, margin: "-80px" };
 
 /** Subtle hover lift for cards. */
 export const hoverLift = {
